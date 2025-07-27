@@ -1,11 +1,14 @@
 import {base_url, period_month} from "../utils/constants.js";
 import {useEffect, useState} from "react";
 
+interface InfoHero {
+    [key:string]:string;
+}
 
 const AboutMe = () => {
-    const [hero, setHero] = useState();
+    const [hero, setHero] = useState<InfoHero>();
     useEffect(() => {
-        const hero = JSON.parse(localStorage.getItem("hero") );
+        const hero = JSON.parse(localStorage.getItem("hero") as string );
         if (hero && ((Date.now() - hero.timestamp) < period_month)) {
             setHero(hero.payload);
         } else {
