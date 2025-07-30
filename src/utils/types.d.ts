@@ -13,3 +13,4 @@ export interface HeroInfo {
     skin_color: string,
     eye_color: string
 }
+

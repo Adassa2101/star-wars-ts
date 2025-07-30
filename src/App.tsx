@@ -1,23 +1,29 @@
 import './App.css'
-import Header from "./components/Header.jsx";
-import Main from "./components/Main.jsx";
-import Footer from "./components/Footer.jsx";
+import Header from "./components/Header.tsx";
+import Main from "./components/Main.tsx";
+import Footer from "./components/Footer.tsx";
 import {useState} from "react";
-import {navItems} from "./utils/constants.js";
+import {navItems} from "./utils/constants.ts";
 import {SWContext} from "./utils/context.ts";
 
+
 function App() {
-    const [page,setPage] = useState(navItems[0]);
+    const [page, setPage] = useState(navItems[0]);
+    //const [hero, setHero] = useState<Hero>();
+
+
     return (
-        <div >
-            <SWContext value={{page, changePage:setPage}}>
-            <Header changePage={setPage}/>
-            <Main />
-            <Footer/>
+        <div>
+            <SWContext value={{page, changePage: setPage}}>
+                <Header/>
+                <Main/>
+                <Footer/>
             </SWContext>
         </div>
 
+
     )
 }
+
 
 export default App
