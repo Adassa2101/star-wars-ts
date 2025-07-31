@@ -17,7 +17,7 @@ interface Hero {
     url: string,
 }
 type Characters = { [key: string]: Hero };//индексная сигнатура
-
+export const defaultValue = 'luke';
 export const characters:Characters = {
     luke: {
         name: "Luke Skywalker",
@@ -36,7 +36,7 @@ export const characters:Characters = {
     },
     leia:{
         name: "Leia Organa",
-        img: friend6,
+        img: friend9,
         url: `${base_url+version}/peoples/5`
     },
     obi_wan:{
@@ -56,7 +56,7 @@ export const characters:Characters = {
     },
     yoda:{
         name: "Yoda",
-        img: friend9,
+        img: friend6,
         url: `${base_url+version}/peoples/0`
     },
     ewok:{
