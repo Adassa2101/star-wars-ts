@@ -38,7 +38,6 @@ const AboutMe = () => {
         }
     }, [heroId])
 
-
     return (
         <>
             {(!!hero) &&

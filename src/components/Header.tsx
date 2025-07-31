@@ -1,11 +1,11 @@
 import Navigation from "./Navigation.tsx";
-import {characters} from "../utils/constants.ts";
-import {SWContext} from "../utils/context.ts";
 import {useContext} from "react";
+import {SWContext} from "../utils/context.ts";
+import {characters} from "../utils/constants.ts";
 
 
 const Header = () => {
-    const {hero} = useContext(SWContext);
+    const {hero} = useContext(SWContext)
     return (
         <header className="rounded-t-3xl bg-grey-color">
             <Navigation/>
