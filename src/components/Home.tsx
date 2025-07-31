@@ -5,23 +5,26 @@ import {useParams} from "react-router";
 import {SWContext} from "../utils/context.ts";
 import {useContext, useEffect} from "react";
 import {characters, defaultValue} from "../utils/constants.ts";
+import ErrorPage from "./ErrorPage.tsx";
 
 const Home = () => {
-    let {heroId = defaultValue } = useParams();
+    const {heroId = defaultValue } = useParams();
     const {changeHero} = useContext(SWContext);
 
     useEffect(() => {
-        heroId = (heroId in characters) ? heroId : defaultValue;
+        if(!(heroId in characters)){
+            return;
+        }
         changeHero(heroId);
     },[heroId])
 
-    return (
+    return (heroId in characters) ?  (
         <main>
             <Hero/>
             <DreamTeam/>
             <OpeningCrawl/>
         </main>
-    );
+    ): <ErrorPage/>;
 };
 
 
