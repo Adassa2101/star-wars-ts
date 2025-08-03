@@ -19,6 +19,7 @@ interface Hero {
 type Characters = { [key: string]: Hero };//индексная сигнатура
 export const defaultValue = 'luke';
 export const characters:Characters = {
+
     luke: {
         name: "Luke Skywalker",
         img: friend0,

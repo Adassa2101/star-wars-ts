@@ -14,9 +14,10 @@ export const useErrorPage = () => {
         changeHero(heroId);
     },[heroId])
 
-    return{
+    return {
         isError: !(heroId in characters),
         heroId
     }
+
 
 }

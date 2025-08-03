@@ -5,6 +5,7 @@ import ErrorPage from "./ErrorPage.tsx";
 import {useErrorPage} from "../hooks/useErrorPage.tsx";
 
 const Home = () => {
+
     const {isError} = useErrorPage();
 
 
